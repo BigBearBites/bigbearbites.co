@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Big Bear Bites – Creatine Gummies</title>
+<link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Nunito', sans-serif; background: #FFF4EE; color: #2C1810; overflow-x: hidden; }
+
+  nav {
+    background: #FF6B35;
+    padding: 14px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 0 #E55A26;
+  }
+  .nav-logo { font-family: 'Boogaloo', cursive; font-size: 26px; color: #fff; letter-spacing: 1px; }
+  .nav-logo span { color: #FFE0A3; }
+  .nav-cta {
+    background: #fff; color: #FF6B35; font-family: 'Nunito', sans-serif;
+    font-weight: 800; font-size: 14px; padding: 10px 22px; border-radius: 50px;
+    border: none; cursor: pointer; text-decoration: none; letter-spacing: 0.5px;
+    transition: transform 0.15s, box-shadow 0.15s; box-shadow: 0 3px 0 #E5C07A;
+  }
+  .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 5px 0 #E5C07A; }
+
+  .hero {
+    background: linear-gradient(160deg, #FF6B35 0%, #FF8C5A 45%, #FFA877 100%);
+    padding: 60px 32px 0; text-align: center; position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute; top: -60px; right: -60px;
+    width: 250px; height: 250px; background: rgba(255,255,255,0.08); border-radius: 50%;
+  }
+  .hero-badge {
+    display: inline-block; background: #FFE0A3; color: #C45C00;
+    font-weight: 800; font-size: 12px; padding: 6px 18px; border-radius: 50px;
+    letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 18px;
+  }
+  .hero h1 {
+    font-family: 'Boogaloo', cursive; font-size: clamp(48px, 9vw, 82px);
+    color: #fff; line-height: 1.0; text-shadow: 0 4px 0 rgba(0,0,0,0.12); margin-bottom: 10px;
+  }
+  .hero h1 em { font-style: normal; color: #FFE0A3; }
+  .hero-sub {
+    color: rgba(255,255,255,0.92); font-size: 18px; font-weight: 600;
+    margin-bottom: 28px; max-width: 420px; margin-left: auto; margin-right: auto;
+  }
+  .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px; position: relative; z-index: 2; }
+  .btn-primary {
+    background: #fff; color: #FF6B35; font-weight: 900; font-size: 16px;
+    padding: 16px 36px; border-radius: 50px; border: none; cursor: pointer;
+    text-decoration: none; box-shadow: 0 5px 0 #d45a28;
+    transition: transform 0.15s, box-shadow 0.15s; display: inline-block;
+  }
+  .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 0 #d45a28; }
+  .btn-primary:active { transform: translateY(2px); box-shadow: 0 2px 0 #d45a28; }
+  .btn-ghost {
+    background: rgba(255,255,255,0.18); color: #fff; font-weight: 700; font-size: 16px;
+    padding: 16px 28px; border-radius: 50px; border: 2px solid rgba(255,255,255,0.5);
+    cursor: pointer; text-decoration: none; transition: background 0.15s; display: inline-block;
+  }
+  .btn-ghost:hover { background: rgba(255,255,255,0.28); }
+
+  .hero-img-wrap {
+    position: relative; z-index: 2; display: inline-block;
+    animation: float 3s ease-in-out infinite;
+  }
+  @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+  .hero-img-wrap img { width: clamp(220px, 40vw, 340px); filter: drop-shadow(0 16px 32px rgba(0,0,0,0.2)); }
+
+  .trust-bar {
+    background: #2C1810; color: #FFE0A3; padding: 14px 32px;
+    display: flex; justify-content: center; gap: 36px; flex-wrap: wrap;
+    font-size: 13px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase;
+  }
+  .trust-bar span { display: flex; align-items: center; gap: 6px; }
+  .trust-bar span::before { content: '✓'; color: #FF8C5A; font-size: 15px; }
+
+  .stats { padding: 60px 32px; text-align: center; max-width: 900px; margin: 0 auto; }
+  .stats-label { font-size: 13px; font-weight: 800; color: #FF6B35; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
+  .stats h2 { font-family: 'Boogaloo', cursive; font-size: clamp(32px, 5vw, 52px); color: #2C1810; margin-bottom: 40px; line-height: 1.1; }
+  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; }
+  .stat-card {
+    background: #fff; border-radius: 20px; padding: 28px 16px;
+    border: 3px solid #FFD4B8; transition: transform 0.2s, border-color 0.2s;
+  }
+  .stat-card:hover { transform: translateY(-4px); border-color: #FF6B35; }
+  .stat-num { font-family: 'Boogaloo', cursive; font-size: 48px; color: #FF6B35; line-height: 1; margin-bottom: 4px; }
+  .stat-label { font-size: 13px; font-weight: 700; color: #7A4030; text-transform: uppercase; letter-spacing: 0.5px; }
+
+  .product-section { background: #fff; padding: 70px 32px; }
+  .section-label { font-size: 13px; font-weight: 800; color: #FF6B35; letter-spacing: 2px; text-transform: uppercase; text-align: center; margin-bottom: 10px; }
+  .section-title { font-family: 'Boogaloo', cursive; font-size: clamp(30px, 5vw, 48px); text-align: center; color: #2C1810; margin-bottom: 50px; }
+  .product-card { max-width: 820px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  @media (max-width: 600px) { .product-card { grid-template-columns: 1fr; } }
+  .product-img { background: #FFF4EE; border-radius: 28px; padding: 24px; text-align: center; border: 3px solid #FFD4B8; }
+  .product-img img { width: 100%; max-width: 260px; border-radius: 12px; }
+  .product-info h3 { font-family: 'Boogaloo', cursive; font-size: 36px; color: #2C1810; line-height: 1.1; margin-bottom: 8px; }
+  .flavor-badge { display: inline-block; background: #FFE0A3; color: #A05000; font-weight: 800; font-size: 12px; padding: 4px 14px; border-radius: 50px; margin-bottom: 16px; }
+  .features-list { list-style: none; margin-bottom: 24px; }
+  .features-list li { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px dashed #FFD4B8; font-weight: 600; font-size: 15px; color: #3D1E14; }
+  .features-list li:last-child { border-bottom: none; }
+  .feat-icon { width: 30px; height: 30px; background: #FF6B35; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
+  .price-row { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+  .price { font-family: 'Boogaloo', cursive; font-size: 40px; color: #FF6B35; }
+  .price-sub { font-size: 13px; color: #7A4030; font-weight: 600; }
+  .buy-btn {
+    width: 100%; background: #FF6B35; color: #fff; font-family: 'Nunito', sans-serif;
+    font-weight: 900; font-size: 17px; padding: 18px; border-radius: 50px; border: none;
+    cursor: pointer; box-shadow: 0 5px 0 #C04A1C; transition: transform 0.15s, box-shadow 0.15s;
+    letter-spacing: 0.5px; text-decoration: none; display: block; text-align: center;
+  }
+  .buy-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 0 #C04A1C; }
+  .buy-btn:active { transform: translateY(2px); box-shadow: 0 2px 0 #C04A1C; }
+  .guarantee { font-size: 12px; color: #7A4030; text-align: center; margin-top: 10px; font-weight: 600; }
+
+  .why-section { background: #FFF4EE; padding: 70px 32px; }
+  .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; max-width: 900px; margin: 0 auto; }
+  .why-card { background: #fff; border-radius: 20px; padding: 28px 22px; border: 2px solid #FFD4B8; text-align: center; transition: transform 0.2s; }
+  .why-card:hover { transform: translateY(-5px); }
+  .why-icon { font-size: 40px; margin-bottom: 12px; display: block; }
+  .why-card h4 { font-family: 'Boogaloo', cursive; font-size: 22px; color: #2C1810; margin-bottom: 8px; }
+  .why-card p { font-size: 14px; color: #7A4030; font-weight: 600; line-height: 1.5; }
+
+  .reviews-section { background: #FF6B35; padding: 70px 32px; text-align: center; }
+  .reviews-section .section-title { color: #fff; }
+  .reviews-section .section-label { color: #FFE0A3; }
+  .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; max-width: 860px; margin: 0 auto; }
+  .review-card { background: rgba(255,255,255,0.15); border-radius: 20px; padding: 24px; border: 2px solid rgba(255,255,255,0.25); text-align: left; }
+  .stars { font-size: 18px; margin-bottom: 10px; }
+  .review-text { color: #fff; font-size: 14px; font-weight: 600; line-height: 1.6; margin-bottom: 14px; }
+  .reviewer { font-weight: 800; font-size: 13px; color: #FFE0A3; }
+
+  .cta-section { background: #2C1810; padding: 80px 32px; text-align: center; }
+  .cta-section h2 { font-family: 'Boogaloo', cursive; font-size: clamp(36px, 6vw, 64px); color: #FFE0A3; margin-bottom: 12px; line-height: 1.1; }
+  .cta-section p { color: rgba(255,224,163,0.75); font-size: 16px; font-weight: 600; margin-bottom: 32px; }
+  .cta-btn {
+    display: inline-block; background: #FF6B35; color: #fff; font-family: 'Nunito', sans-serif;
+    font-weight: 900; font-size: 18px; padding: 20px 52px; border-radius: 50px; border: none;
+    cursor: pointer; box-shadow: 0 5px 0 #A04020; text-decoration: none;
+    transition: transform 0.15s, box-shadow 0.15s; letter-spacing: 0.5px;
+  }
+  .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 0 #A04020; }
+
+  footer { background: #1A0F0A; color: rgba(255,224,163,0.6); text-align: center; padding: 24px 32px; font-size: 13px; font-weight: 600; }
+  footer a { color: #FF8C5A; text-decoration: none; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Big Bear <span>Bites</span> 🐻</div>
+  <a href="https://i57r7pt3pailsdw9-77165822092.shopifypreview.com/products_preview?preview_key=8604093fd89abc3ca18744c102220bdb" class="nav-cta" target="_blank">Shop Now →</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-badge">🍑 Peach · Watermelon · Blueberry — Now Available</div>
+  <h1>Gains Never<br>Tasted <em>This Good</em></h1>
+  <p class="hero-sub">5000mg Creatine Monohydrate packed into delicious gummies. Zero sugar. No chalky powder. Just results.</p>
+  <div class="hero-btns">
+    <a href="https://i57r7pt3pailsdw9-77165822092.shopifypreview.com/products_preview?preview_key=8604093fd89abc3ca18744c102220bdb" class="btn-primary" target="_blank">🛒 Grab Your Bag</a>
+    <a href="#why" class="btn-ghost">See Why It Works</a>
+  </div>
+  <div class="hero-img-wrap">
+    <img src="https://i.imgur.com/placeholder.png" alt="Big Bear Bites Creatine Gummies" onerror="this.style.display='none'" />
+  </div>
+</section>
+
+<div class="trust-bar">
+  <span>FDA Registered Facility</span>
+  <span>Zero Sugar</span>
+  <span>Gluten Free</span>
+  <span>30 Servings</span>
+  <span>5000mg Creatine</span>
+</div>
+
+<section class="stats">
+  <div class="stats-label">By the numbers</div>
+  <h2>Everything you need.<br>Nothing you don't.</h2>
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-num">5g</div><div class="stat-label">Creatine Per Serving</div></div>
+    <div class="stat-card"><div class="stat-num">90</div><div class="stat-label">Gummies Per Bag</div></div>
+    <div class="stat-card"><div class="stat-num">30</div><div class="stat-label">Day Supply</div></div>
+    <div class="stat-card"><div class="stat-num">0g</div><div class="stat-label">Sugar</div></div>
+  </div>
+</section>
+
+<section class="product-section" id="buy">
+  <div class="section-label">The product</div>
+  <div class="section-title">Big Bear Bites Creatine Gummies</div>
+  <div class="product-card">
+    <div class="product-img">
+      <img src="https://i.imgur.com/placeholder.png" alt="Big Bear Bites" onerror="this.style.display='none'" />
+    </div>
+    <div class="product-info">
+      <div class="flavor-badge">🍑 Peach · 🍉 Watermelon · 🫐 Blueberry</div>
+      <h3>Creatine Monohydrate Gummies</h3>
+      <ul class="features-list">
+        <li><span class="feat-icon">💪</span> Support muscles & boost strength</li>
+        <li><span class="feat-icon">⚡</span> Boost energy & performance</li>
+        <li><span class="feat-icon">🔄</span> Faster recovery after workouts</li>
+        <li><span class="feat-icon">🏭</span> Made in FDA registered facility</li>
+        <li><span class="feat-icon">✨</span> Zero sugar · Gluten free</li>
+      </ul>
+      <div class="price-row">
+        <div class="price">$19.99</div>
+        <div class="price-sub">per bag<br>90 gummies · 30 servings</div>
+      </div>
+      <a href="https://i57r7pt3pailsdw9-77165822092.shopifypreview.com/products_preview?preview_key=8604093fd89abc3ca18744c102220bdb" class="buy-btn" target="_blank">🛒 Buy Now – Get Yours Today</a>
+      <p class="guarantee">🔒 Secure checkout · Ships fast</p>
+    </div>
+  </div>
+</section>
+
+<section class="why-section" id="why">
+  <div class="section-label">Why choose us</div>
+  <div class="section-title">Creatine that doesn't suck</div>
+  <div class="why-grid">
+    <div class="why-card"><span class="why-icon">🐻</span><h4>Actually Tasty</h4><p>Forget the chalky powder. These taste like real candy — because they basically are.</p></div>
+    <div class="why-card"><span class="why-icon">🔬</span><h4>Science-Backed</h4><p>5000mg of pure creatine monohydrate — the most researched form for muscle & strength.</p></div>
+    <div class="why-card"><span class="why-icon">🏋️</span><h4>Real Results</h4><p>More strength. Better pumps. Faster recovery. Feel the difference in week one.</p></div>
+    <div class="why-card"><span class="why-icon">✅</span><h4>Clean Formula</h4><p>Zero sugar, gluten free, made in an FDA registered facility. Clean gains only.</p></div>
+  </div>
+</section>
+
+<section class="reviews-section">
+  <div class="section-label">Happy Bears</div>
+  <div class="section-title">People are obsessed 🐻</div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p class="review-text">"I've tried every creatine powder on the market. These gummies are a total game changer. I actually look forward to taking them."</p>
+      <div class="reviewer">— Marcus T., verified buyer</div>
+    </div>
+    <div class="review-card">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p class="review-text">"Tastes amazing AND I've noticed real strength gains in just 3 weeks. My gym buddies are all ordering now."</p>
+      <div class="reviewer">— Jess R., verified buyer</div>
+    </div>
+    <div class="review-card">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p class="review-text">"Finally a supplement I don't have to choke down. The flavor is incredible and the results speak for themselves."</p>
+      <div class="reviewer">— Devon K., verified buyer</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>Ready to Level Up?</h2>
+  <p>Join thousands of bears getting stronger every day.</p>
+  <a href="https://i57r7pt3pailsdw9-77165822092.shopifypreview.com/products_preview?preview_key=8604093fd89abc3ca18744c102220bdb" class="cta-btn" target="_blank">🐻 Get Big Bear Bites Now</a>
+</section>
+
+<footer>
+  <p>© 2025 Big Bear Bites · <a href="#">Contact</a> · <a href="#">Privacy Policy</a></p>
+  <p style="margin-top:6px;">These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+</footer>
+
+</body>
+</html>
